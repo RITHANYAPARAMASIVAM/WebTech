@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BOOTSTRAP</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <!-- Bootstrap 5 CDN -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark px-4">
+  <a class="navbar-brand fw-bold d-flex align-items-center" href="#">
+    ZFIT
+    <img src="logo.jpeg" alt="ZFIT Logo" width="40" height="40" class="ms-2">
+  </a>
+
+  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#zfitNavbar">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="zfitNavbar">
+    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+      <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+
+      <!-- 🔽 Dropdown for About -->
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="aboutDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+          About
+        </a>
+        <ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="aboutDropdown">
+          <li><a class="dropdown-item" href="about_programs.html">Programs</a></li>
+          <li><a class="dropdown-item" href="about_trainers.html">Trainers</a></li>
+          <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+          <li><a class="dropdown-item" href="dietplan.html">DietPlan</a></li>
+        </ul>
+      </li>
+
+      <li class="nav-item"><a class="nav-link" href="register.html">Register</a></li>
+      <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!------------------------------------------background image----------------------->
+<!-- 🔽 Hero Section with Fullscreen Background -->
+<section class="hero-section d-flex align-items-center justify-content-center text-center text-white">
+  <div class="container">
+  </div>
+</section>
+
+<!-- 🔽 Add this CSS in your <style> tag or external stylesheet -->
+<style>
+  .hero-section {
+    position: relative;
+    background: url('gym.jpg') no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    margin-top: -1px;
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  /* 🔆 Overlay to reduce brightness */
+  .hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity for brightness */
+    z-index: 2;
+  }
+
+  /* ⬆️ Ensures text appears above the overlay */
+  .hero-section .container {
+    position: relative;
+    z-index: 3;
+  }
+</style>
+
+
+
+
+</body>
+</html>

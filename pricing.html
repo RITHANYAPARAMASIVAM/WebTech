@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ZFIT Pricing</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome for Home Icon -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+
+  <style>
+    body {
+      background: url('gyms.jpeg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .pricing-section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 1;
+      padding: 60px 0;
+    }
+
+    .pricing-section::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background-color: rgba(0, 0, 0, 0.7);
+      z-index: -1;
+    }
+
+    .carousel-item {
+      transition: transform 0.8s ease-in-out;
+    }
+
+    .card {
+      background-color: rgba(255, 255, 255, 0.95);
+      color: #000;
+      border: none;
+      border-radius: 12px;
+      box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+      padding: 30px;
+    }
+
+    .card h4 {
+      font-weight: bold;
+    }
+
+    .card ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .card ul li::before {
+      content: "✔️ ";
+      margin-right: 5px;
+    }
+
+    .toggle-switch {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .toggle-switch label {
+      margin: 0 10px;
+      font-weight: bold;
+    }
+
+    .btn-buy {
+      background-color: #000;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 20px;
+      border-radius: 5px;
+    }
+
+    .btn-buy:hover {
+      background-color: #333;
+    }
+
+    /* Home Button Styling */
+    .home-button {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #000;
+      color: #fff;
+      padding: 12px 14px;
+      border-radius: 50%;
+      font-size: 1.2rem;
+      z-index: 999;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+      transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .home-button:hover {
+      background-color: #e50914;
+      transform: scale(1.1);
+    }
+  </style>
+</head>
+<body>
+
+<div class="container pricing-section text-center">
+  <div class="w-100">
+    <h2 class="mb-3">Pricing Plan</h2>
+    <p class="mb-4">Our Affordable Pricing Plans</p>
+
+    <!-- Toggle Switch -->
+    <div class="toggle-switch">
+      <label>Monthly</label>
+      <div class="form-check form-switch">
+        <input class="form-check-input" type="checkbox" id="billingToggle">
+      </div>
+      <label>Yearly <span class="text-warning">25% OFF</span></label>
+    </div>
+
+    <!-- Carousel -->
+    <div id="pricingCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+
+        <!-- Starter Plan -->
+        <div class="carousel-item active">
+          <div class="card mx-auto" style="max-width: 400px;">
+            <h4>Starter</h4>
+            <p class="fs-4" id="starterPrice">$73 <small>/month</small></p>
+            <ul class="text-start">
+              <li>Gym Access</li>
+              <li>Locker Room</li>
+              <li>Premium Phone Support</li>
+              <li>Unlimited Bandwidth</li>
+              <li>Steam Room Access</li>
+              <li>Basic Nutrition Tips</li>
+            </ul>
+            <button class="btn btn-buy">BUY NOW</button>
+          </div>
+        </div>
+
+        <!-- Premium Plan -->
+        <div class="carousel-item">
+          <div class="card mx-auto" style="max-width: 400px;">
+            <h4>Premium</h4>
+            <p class="fs-4" id="premiumPrice">$88 <small>/month</small></p>
+            <ul class="text-start">
+              <li>All Group Classes</li>
+              <li>Personal Training (2 sessions)</li>
+              <li>Premium Phone Support</li>
+              <li>Unlimited Bandwidth</li>
+              <li>Steam + Locker Access</li>
+              <li>Nutrition Counseling</li>
+            </ul>
+            <button class="btn btn-buy">BUY NOW</button>
+          </div>
+        </div>
+
+        <!-- Unlimited Plan -->
+        <div class="carousel-item">
+          <div class="card mx-auto" style="max-width: 400px;">
+            <h4>Unlimited</h4>
+            <p class="fs-4" id="unlimitedPrice">$93 <small>/month</small></p>
+            <ul class="text-start">
+              <li>Unlimited Personal Training</li>
+              <li>All Classes + Steam</li>
+              <li>Priority Locker Access</li>
+              <li>Custom Diet Plan</li>
+              <li>24/7 Gym Access</li>
+              <li>Dedicated Coach</li>
+            </ul>
+            <button class="btn btn-buy">BUY NOW</button>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#pricingCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#pricingCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- Home Button -->
+<a href="index.html" class="home-button" title="Back to Home">
+  <i class="fas fa-home"></i>
+</a>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Toggle Pricing Script -->
+<script>
+  const toggle = document.getElementById('billingToggle');
+  toggle.addEventListener('change', () => {
+    document.getElementById('starterPrice').innerHTML = toggle.checked ? "$657 <small>/year</small>" : "$73 <small>/month</small>";
+    document.getElementById('premiumPrice').innerHTML = toggle.checked ? "$792 <small>/year</small>" : "$88 <small>/month</small>";
+    document.getElementById('unlimitedPrice').innerHTML = toggle.checked ? "$837 <small>/year</small>" : "$93 <small>/month</small>";
+  });
+</script>
+
+</body>
+</html>

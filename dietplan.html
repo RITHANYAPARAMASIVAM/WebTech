@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diet Plans by BMI</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: url('dieta.jpg') no-repeat center center fixed;
+      background-size: cover;
+      color: white;
+    }
+    .overlay {
+      background-color: rgba(0, 0, 0, 0.7);
+      min-height: 100vh;
+      padding: 2rem;
+    }
+    .card {
+      background-color: rgba(255, 255, 255, 0.1);
+      border: none;
+      color: white;
+    }
+    .card-title {
+      font-weight: bold;
+    }
+    .btn-outline-light {
+      border-color: white;
+      color: white;
+    }
+    .btn-outline-light:hover {
+      background-color: white;
+      color: black;
+    }
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+    .diet-section {
+      margin-top: 60px;
+    }
+    .home-icon {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 50%;
+      padding: 12px 15px;
+      z-index: 1000;
+      transition: background-color 0.3s;
+    }
+    .home-icon:hover {
+      background-color: white;
+      color: black;
+    }
+    .home-icon i {
+      font-size: 24px;
+      color: white;
+    }
+    .home-icon:hover i {
+      color: black;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <div class="container-fluid">
+      <!-- Optional Navbar Placeholder -->
+    </div>
+
+    <div class="container diet-section">
+      <h2 class="text-center mb-5">Personalized Diet Plans by BMI</h2>
+      <div class="row g-4">
+        <!-- Underweight -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">Underweight</h5>
+              <p class="card-text">BMI &lt; 18.5</p>
+              <ul>
+                <li>High-calorie smoothies</li>
+                <li>Nut butters and whole grains</li>
+                <li>Frequent meals and snacks</li>
+                <li>Protein-rich foods (eggs, legumes)</li>
+              </ul>
+              <a href="#" class="btn btn-outline-light">Get Plan</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Normal Weight -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">Normal Weight</h5>
+              <p class="card-text">BMI 18.5 – 24.9</p>
+              <ul>
+                <li>Balanced macronutrients</li>
+                <li>Plenty of fruits & vegetables</li>
+                <li>Lean proteins and whole grains</li>
+                <li>Hydration and portion control</li>
+              </ul>
+              <a href="#" class="btn btn-outline-light">Get Plan</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Overweight -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">Overweight</h5>
+              <p class="card-text">BMI 25 – 29.9</p>
+              <ul>
+                <li>Low-carb, high-fiber meals</li>
+                <li>Healthy fats (avocados, nuts)</li>
+                <li>Smaller, frequent meals</li>
+                <li>Limit sugar and processed foods</li>
+              </ul>
+              <a href="#" class="btn btn-outline-light">Get Plan</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Obese -->
+        <div class="col-md-6 col-lg-3">
+          <div class="card h-100 p-3">
+            <div class="card-body">
+              <h5 class="card-title">Obese</h5>
+              <p class="card-text">BMI ≥ 30</p>
+              <ul>
+                <li>Calorie-controlled meals</li>
+                <li>High protein, low sugar</li>
+                <li>Vegetable-heavy plates</li>
+                <li>Professional dietary guidance</li>
+              </ul>
+              <a href="#" class="btn btn-outline-light">Get Plan</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Floating Home Icon -->
+    <a href="index.html" class="home-icon" title="Go to Home">
+      <i class="fas fa-home"></i>
+    </a>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
